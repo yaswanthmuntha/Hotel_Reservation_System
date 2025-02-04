@@ -48,13 +48,13 @@ public class Reception {
                         exit();
                         return;
                 }
+                conn.close();
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     private static void insertion(Connection conn, Scanner sc) throws SQLException {
